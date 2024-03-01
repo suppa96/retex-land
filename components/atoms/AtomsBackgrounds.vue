@@ -26,6 +26,7 @@ defineProps<{
 
 <style scoped lang="scss">
 .welcome-bg {
+  @apply w-[1326px] h-[1578px] -top-[363px] -left-[448px];
   background-image: url("/backgrounds/bg-welcome.png");
   background-size: cover;
   background-position: 0 0;
