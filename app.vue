@@ -1,9 +1,9 @@
 <script setup lang="ts">
-const { setQuestions } = await useQuestionsSetting()
+const { setQuestions } = await useQuestionsSettings()
 await setQuestions()
 </script>
 <template>
-  <main class="h-screen w-screen m-0 p-0 flex flex-col justify-between">
+  <main>
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>

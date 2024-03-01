@@ -1,4 +1,4 @@
-export const useQuestionsSetting = () => {
+  export const useQuestionsSettings = defineStore("questionsSetting", () => {
 
     const questions = ref()
 
@@ -12,9 +12,7 @@ export const useQuestionsSetting = () => {
         const questionsGET = await import(
           `../static/questions.json`
         )
-        console.log('set questions')
         questions.value = questionsGET.default ?? []
-        console.log('questions.value', questions.value)
       } catch (err) {
         throw createError({
           statusCode: 500,
@@ -33,4 +31,10 @@ export const useQuestionsSetting = () => {
     // METHODS 
     setQuestions,
   }
-}
+  });
+  
+  // @ts-ignore
+  if (import.meta.hot)
+  // @ts-ignore
+    import.meta.hot.accept(acceptHMRUpdate(useQuestionsSettings, import.meta.hot))
+  

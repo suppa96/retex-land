@@ -11,7 +11,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#0047FF'
+        primary: '#0047FF',
+        lightBlue: '#BBF7FF',
+        lightGreen: '#83FFAD'
+      },
+      borderRadius: {
+        box: '8px'
       }
     },
   },

@@ -10,7 +10,7 @@ export default defineNuxtConfig({
     typeCheck: true,
   },
   devtools: { enabled: true },
-  modules: ['@pinia/nuxt', '@nuxtjs/google-fonts'],
+  modules: ['@pinia/nuxt', '@nuxtjs/google-fonts' ,'@vueuse/nuxt'],
   css: ["~/assets/css/main.scss"],
   googleFonts: {
     families: {
