@@ -4,7 +4,7 @@ export default defineNuxtConfig({
     typeCheck: true,
   },
   devtools: { enabled: true },
-  modules: ['@pinia/nuxt'],
+  modules: ["@pinia/nuxt"],
   css: ["~/assets/css/main.scss"],
   postcss: {
     plugins: {
