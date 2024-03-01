@@ -1,6 +1,6 @@
 <template>
   <div class="h-screen relative overflow-hidden">
-    <AtomsBackgrounds bg-type="welcome" />
+    <!-- <AtomsBackgrounds bg-type="welcome" /> -->
     <div class="min-h-screen">
       <OrganismsHeader type="standard" />
       <slot />
