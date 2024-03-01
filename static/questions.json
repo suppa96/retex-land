@@ -1,0 +1,26 @@
+[
+    {
+        "question": "Hai compilato le ore ?",
+        "casesNegative": ["no", "oh", "cavolo", "hai", "ragione", "non", "ancora", "magari"],
+        "file": {
+            "id": "time-report",
+            "response": "Ecco allora il file di spiegazione per poterti dare una mano sulla compilazione.."
+        }
+    },
+    {
+        "question": "Sai come chiedere permesso ?",
+        "casesNegative": ["no", "oh", "cavolo", "hai", "ragione", "non", "ancora", "magari"],
+        "file": {
+            "id": "ferie-permessi",
+            "response": "Non ti preoccupare è semplice! Segui i prossimi step di questo documento"
+        }
+    },
+    {
+        "question": "La tua attrezzatura è tutto ok ?",
+        "casesNegative": ["no", "oh", "cavolo", "hai", "ragione", "non", "ancora", "magari"],
+        "file": {
+            "id": "supporto-it",
+            "response": "Per aprire un ticket al supporto IT basta seguerire i prossimi spassi spiegati nel file di seguito"
+        }
+    }
+]

@@ -1,0 +1,115 @@
+[
+    {
+        "id": "metalmeccanicaindustria",
+        "keywords": ["metalmeccanica", "industria", "contratto", "ccnl", "terziari"],
+        "file": {
+            "name": "CCNL Metalmeccanica Industria.pdf",
+            "origin": "../assets/metalmeccanica.pdf"
+        }
+    },
+    {
+        "id": "telecomunicazioni",
+        "keywords": ["telefono", "cellulare", "aziendale", "telefoni", "cellulari"],
+        "file": {
+            "name": "Telecomunicazioni.pdf",
+            "origin": "../assets/telecomunicazioni.pdf"
+        }
+    },
+    {
+        "id": "assicurazione-sanitaria",
+        "keywords": ["assicurazione", "sanitaria", "fondo", "metasalute", "salute"],
+        "file": {
+            "name": "Telecomunicazioni.pdf",
+            "origin": "../assets/assicurazione-sanitaria.pptx"
+        }
+    },
+    {
+        "id": "carta-credito",
+        "keywords": ["carta", "credito", "aziendale", "carte"],
+        "file": {
+            "name": "Carta di credito aziendale.pdf",
+            "origin": "../assets/carta-credito.pdf"
+        }
+    },
+    {
+        "id": "cedolino",
+        "keywords": ["busta", "paga", "buste", "cedolino", "certificazione", "unica", "irpef", "tfr", "ferie", "permessi", "permesso", "inail", "stipendio", "netto"],
+        "file": {
+            "name": "Cedolino.pdf",
+            "origin": "../assets/cedolino.pptx"
+        }
+    },
+    {
+        "id": "congedo-matrimoniale",
+        "keywords": ["congedo", "matrimoniale", "matrimonio","matrimoni", ""],
+        "file": {
+            "name": "Congedo matrimoniale.pptx",
+            "origin": "../assets/congedo-matrimoniale.pptx"
+        }
+    },
+    {
+        "id": "ferie-permessi",
+        "keywords": ["ferie", "permessi", "rol"],
+        "file": {
+            "name": "Ferie e permessi.pptx",
+            "origin": "../assets/ferie-permessi.pptx"
+        }
+    },
+    {
+        "id": "malattia-infortunio",
+        "keywords": ["malattia", "infortunio", "assenza", "male", "febbre", "bene", "infortunio", "infortuni", "figlio", "figli", "certificato"],
+        "file": {
+            "name": "Malattia e infortunio.pptx",
+            "origin": "../assets/malattia-infortunio.pptx"
+        }
+    },
+    {
+        "id": "maternita-paternita",
+        "keywords": ["congedo", "maternità", "paternità", "matrimonio", "matrimoniale"],
+        "file": {
+            "name": "Maternità e paternità.pptx",
+            "origin": "../assets/maternita-paternita.pptx"
+        }
+    },
+    {
+        "id": "nota-spese",
+        "keywords": ["nota", "note", "spese", "inaz", "rimborso", "rimborsi", "chilometrici", "viaggio", "trasferta", "cliente", "vitto", "pranzo", "cena", "pranzi"],
+        "file": {
+            "name": "Nota spese.pptx",
+            "origin": "../assets/nota-spese.pptx"
+        }
+    },
+    {
+        "id": "rimborso-spese",
+        "keywords": ["rimborso", "spese", "rimborsi", "rimborsi", "chilometrici", "viaggio", "trasferta", "cliente", "vitto", "pranzo", "cena", "pranzi"],
+        "file": {
+            "name": "Rimborso spese.pptx",
+            "origin": "../assets/rimborso-speseo.pptx"
+        }
+    },
+    {
+        "id": "supporto-it",
+        "keywords": ["supporto", "it", "tech", "problema", "monitor", "computer", "tastiera", "mouse", "cellulare", "telefono", "mac", "pc"],
+        "file": {
+            "name": "Supporto it.pptx",
+            "origin": "../assets/supporto-it.pptx"
+        }
+    },
+    {
+        "id": "terziario-confcommercio",
+        "keywords": ["contratto", "terziario", "confcommercio", "sindacato", "sindacali", "contratti", "terziari"],
+        "file": {
+            "name": "CCNL - Terziario Commercio.pdf",
+            "origin": "../assets/terziario-confcommercio.pdf"
+        }
+    },
+    {
+        "id": "time-report",
+        "name": "Time report",
+        "keywords": ["inserimento", "ore", "ora", "billable", "paprika", "progeta", "foglio", "inserire", "lavoro", "progetto", "progetti"],
+        "file": {
+            "name": "Paprika - Time report.pptx",
+            "origin": "../assets/time-report.pptx"
+        }
+    }
+]
