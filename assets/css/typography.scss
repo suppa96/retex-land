@@ -1,0 +1,9 @@
+@layer base {
+  .text-paragraph-info {
+    @apply font-light text-sm text-center;
+  }
+
+  .text-title-h4 {
+    @apply font-bold text-xl;
+  }
+}
