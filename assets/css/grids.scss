@@ -1,0 +1,49 @@
+@layer components {
+  .padded {
+    @apply px-4 md:px-8 xl:px-20;
+  }
+
+  .negative-margined {
+    @apply -mx-4 md:mx-0;
+  }
+
+  .margined {
+    @apply mx-4 md:mx-8 xl:mx-20;
+  }
+
+  .gapped {
+    @apply gap-x-8;
+  }
+
+  .boxed {
+    @apply w-full max-w-screen-lg mx-auto;
+  }
+
+  .grid-columns {
+    @apply grid-cols-4 md:grid-cols-9 lg:grid-cols-12;
+  }
+
+  .grid-default {
+    @apply grid content-start grid-columns;
+  }
+
+  .grid-default-boxed {
+    @apply grid-default boxed;
+  }
+
+  .grid-container {
+    @apply grid-default gapped;
+  }
+
+  .grid-container-boxed {
+    @apply grid-container boxed;
+  }
+
+  .grid-standard {
+    @apply grid-default gapped padded;
+  }
+
+  .grid-standard-boxed {
+    @apply grid-standard boxed;
+  }
+}
