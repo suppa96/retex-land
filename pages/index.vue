@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useUsersStore, type User } from '~/stores/users';
+import { useUsersStore } from '~/stores/users';
 
 // const hash = 'f2858703622f57ac4a81905d4afd72cf'
 const hash = '1fb3b75e28dc98f0424e289fd16c0fde'
@@ -17,7 +17,7 @@ const updateInfo = () => {
 <template>
   <div>
     <p>Benvenut* {{ user?.name }}</p>
-    <button @click="updateInfo">UPDATE GIORGIA</button>
+    <AtomsButton @click="updateInfo" label="UPDATE GIORGIA" type="primary" />
     <pre>{{ user }}</pre>
   </div>
 </template>

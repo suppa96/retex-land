@@ -1,5 +1,5 @@
+
 <template>
-  <div style="background-color: red">Header</div>
+  <OrganismsHeader type="standard" />
   <slot />
-  <div style="background-color: blue">Footer</div>
 </template>
