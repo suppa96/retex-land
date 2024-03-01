@@ -19,14 +19,14 @@ const welcome = computed<string>(() => {
 <template>
   <div class="w-full flex flex-col items-center">
     <div class="flex flex-col mx-[30px] items-center text-white">
-      <h4 class="text-heading-h4">{{ `${welcome} ${user?.name} ` }}</h4>
+      <h4 class="text-title-h4">{{ `${welcome} ${user?.name} ` }}</h4>
       <p class="text-paragraph-info text-center">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
         ratione debitis quis est labore voluptatibus! Eaque cupiditate minima
       </p>
     </div>
     <AtomsButton
-      :to="'/ordinary'"
+      :to="'/onboarding'"
       class="w-full px-4"
       @click="$emit('updateInfo')"
       label="UPDATE GIORGIA"

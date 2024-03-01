@@ -1,13 +1,6 @@
 <template>
   <div class="h-screen relative overflow-hidden">
-    <div class="absolute -z-10">
-      <div
-        class="welcome-bg w-[1326px] h-[1578px] absolute -top-[363px] -left-[448px]"
-      ></div>
-      <div
-        class="w-screen h-screen bg-gradient-to-t absolute from-black to-transparent"
-      ></div>
-    </div>
+    <AtomsBackgrounds bg-type="welcome" />
     <div class="min-h-screen">
       <OrganismsHeader type="standard" />
       <slot />
