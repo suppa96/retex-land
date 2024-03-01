@@ -35,7 +35,7 @@ defineProps<{
 
 .onboarding-bg {
   background-image: url("/backgrounds/bg-onboarding.png");
-  background-size: cover;
+  background-size: contain;
   background-position: 0 0;
   background-repeat: no-repeat;
 }

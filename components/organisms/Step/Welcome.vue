@@ -18,7 +18,7 @@ const welcome = computed<string>(() => {
 </script>
 <template>
   <div class="w-full flex flex-col items-center">
-    <div class="flex flex-col mx-[30px] items-center text-white">
+    <div class="flex flex-col mx-[30px] items-center mt-8 mb-6 text-white">
       <h4 class="text-title-h4">{{ `${welcome} ${user?.name} ` }}</h4>
       <p class="text-paragraph-info text-center">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
