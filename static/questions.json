@@ -46,13 +46,5 @@
             "id": "terziario-confcommercio",
             "response": "È importante sapere che contratto hai, scopri qui i dettagli in pochi passi.."
         }
-    },
-    {
-        "question": "Hai problemi con le note spese ?",
-        "casesNegative": ["no", "oh", "cavolo", "hai", "ragione", "non", "ancora", "magari"],
-        "file": {
-            "id": "note-spese",
-            "response": "Non ti preoccupare, qui puoi trovare la procedura!"
-        }
     }
 ]
