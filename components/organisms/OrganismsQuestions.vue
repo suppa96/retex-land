@@ -1,9 +1,17 @@
 <script setup lang="ts">
-const { randomQuestion } = useQuestionsSetting()
-console.log('randomQuestion', randomQuestion.value)
+const store = useQuestionsSettings()
+const { conversation, initConversation } = useConversation()
+
+const { questions, randomQuestion } = storeToRefs(store)
+const historyQuestions = ref([])
+onMounted(async () => {
+    initConversation()
+})
 </script>
 <template>
-    <div class="chatbot">
-        <pre>{{ randomQuestion }}</pre>
+    <div class="questions flex flex-col gap-y-4" v-if="conversation && conversation.length > 0">
+        <div v-for="message in conversation" :key="message.label">
+            <AtomsQuestion v-bind="message" />
+        </div>
     </div>
 </template>

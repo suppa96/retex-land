@@ -14,10 +14,10 @@ defineProps<{
       x
     ></div>
     <div
-      class="w-screen h-screen absolute bg-gradient-to-t"
+      class="w-screen h-full absolute bg-gradient-to-t"
       :class="
         bgType === 'welcome'
-          ? 'from-black to-transparent'
+          ? 'from-black to-[#00000080]'
           : 'from-transparent to-black'
       "
     ></div>

@@ -17,13 +17,18 @@ const welcome = computed<string>(() => {
 });
 </script>
 <template>
-  <div class="w-full flex flex-col items-center">
-    <div class="flex flex-col mx-[30px] items-center mt-8 mb-6 text-white">
-      <h4 class="text-title-h4">{{ `${welcome} ${user?.name} ` }}</h4>
-      <p class="text-paragraph-info text-center">
-        Iniziamo insieme un viaggio avvincente oltre i confini del retail. Io
-        sarò la tua guida in questa terra da scoprire.
-      </p>
+  <div class="grid-standard flex flex-col items-center pt-[80px]">
+    <div class="flex flex-col mx-[30px] items-center mt-8 mb-14 text-white">
+      <IconsLogo class="w-full" />
+      <div class="infos mt-20">
+        <h4 class="text-title-h4 text-center font-semibold">
+          {{ `${welcome} ${user?.name} ` }}
+        </h4>
+        <p class="text-paragraph-info text-center">
+          Iniziamo insieme un viaggio avvincente oltre i confini del retail. Io
+          sarò la tua guida in questa terra da scoprire.
+        </p>
+      </div>
     </div>
     <AtomsButton
       :to="'/onboarding'"
@@ -32,7 +37,7 @@ const welcome = computed<string>(() => {
       label="CREA IL TUO PASSPORT"
       type="secondary"
     />
-    <!-- <pre class="w-full px-4">{{ user }}</pre> -->
+    <pre class="w-full px-4">{{ user }}</pre>
   </div>
 </template>
 
