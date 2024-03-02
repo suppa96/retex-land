@@ -3,6 +3,20 @@ definePageMeta({
   layout: "onboarding",
 });
 
+// const questions: QuestionProps[] = [{
+//     type: "multi-select" | "single-choice";
+//   question: 'LOREMI IPSUM CACCA PUPU';
+//   step: 'personal';
+//   options: string[];
+//   optionalCta: {
+//     to: string;
+//     label: string;
+//     icon?: string;
+//   };
+// }, {
+
+// }]
+
 const steps = [
   { name: "welcome" },
   { name: "personal" },
@@ -20,19 +34,18 @@ const toPrev = () => {
 };
 </script>
 <template>
-  <div class="welcome-page grid-container">
-    <OrganismsScrollStepper
-      class="col-span-full"
+  <div class="welcome-page">
+    <h3 class="text-title-h3 text-white ml-4">Il tuo Retex Passport</h3>
+    <!-- <OrganismsScrollStepper
+      class="w-full"
       v-bind="{ steps, currentStep }"
       @next-step="toNext"
       @prev-step="toPrev"
     >
       <template #step="step">
-        <div class="item w-full">
-          <pre>{{ step }}</pre>
-        </div>
+        <MoleculesQuestion> </MoleculesQuestion>
       </template>
-    </OrganismsScrollStepper>
+    </OrganismsScrollStepper> -->
   </div>
 </template>
 
