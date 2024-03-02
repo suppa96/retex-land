@@ -13,7 +13,7 @@ const classes = computed(() =>
   <NuxtLink
     :to="url"
     @click="$emit('click')"
-    class="w-full py-4 rounded-[100px] font-bold tracking-wider text-center"
+    class="w-full py-3 rounded-[100px] font-bold tracking-wider text-center"
     :class="classes"
     >{{ label }}</NuxtLink
   >
