@@ -4,6 +4,7 @@ export const useConversation = () => {
     const conversation = useState('conversation-texting', () => [])
     const enableTexting = useState('enable-setting', () => false)
     const userInput = useState('user-input', () => '')
+    const messages = computed(() => conversation.value.length ?? 0)
 
     const storeQuestions = useQuestionsSettings()
     const { randomQuestion } = storeToRefs(storeQuestions)
@@ -78,7 +79,7 @@ export const useConversation = () => {
             typing: true,
             type: 'chatbot'
         })
-        await promiseTimeout(500)
+        await promiseTimeout(1500)
         conversation.value.pop()
     }
 
@@ -148,7 +149,6 @@ export const useConversation = () => {
         resetUserInput()
         if(!containsAnyWord(labelValue, randomQuestion.value.casesNegative)) {
             const findFile = await findBestMatch(labelValue)
-            console.log('findFile',findFile)
             if(findFile){
                 await loadingChatbotResponse()
                 conversation.value.push({
@@ -190,6 +190,7 @@ export const useConversation = () => {
         initConversation,
         enableTexting,
         addUserResponse,
-        continueConversation
+        continueConversation,
+        messages
     }
 }

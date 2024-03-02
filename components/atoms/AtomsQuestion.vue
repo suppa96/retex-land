@@ -19,3 +19,14 @@ const classes = computed(() => props.type === 'user' ? 'bg-white rounded-l-box r
         </div>
     </div>
 </template>
+<style scoped lang="scss">
+.question-wrapper {
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+/* Animation to fade in new messages */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+</style>
