@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "NODE_OPTIONS='--max-old-space-size=8192' nuxi build",
+    "build": "NODE_OPTIONS='--max-old-space-size=4096' nuxi build",
+    "build:netlify": "NODE_OPTIONS='--max-old-space-size=8192' NITRO_PRESET=netlify nuxi build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
