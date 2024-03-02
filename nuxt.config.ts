@@ -10,18 +10,8 @@ export default defineNuxtConfig({
     typeCheck: false,
   },
   devtools: { enabled: true },
-  modules: ['@pinia/nuxt', '@nuxtjs/google-fonts' ,'@vueuse/nuxt'],
+  modules: ['@pinia/nuxt' ,'@vueuse/nuxt'],
   css: ["~/assets/css/main.scss"],
-  googleFonts: {
-    families: {
-      Poppins: {
-        wght: [300, 400, 500, 600, 700, 800],
-      },
-    },
-    display: 'swap',
-    preload: true,
-    useStylesheet: true,
-  },
   vite: {
     plugins: [
       Components({
