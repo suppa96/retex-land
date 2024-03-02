@@ -9,8 +9,7 @@ const questions: QuestionStepProps[] = [
   {
     id: 1,
     type: "single-choice",
-    question:
-      "LOREMI IPSUM LOremsaksmdkjnsdjaknsdlan LOremsaksmdkjnsdjaknsdlan",
+    question: "Com'è la tua giornata ideale?",
     stepName: "passions",
     options: [
       "Relax, divano e Netflix",
@@ -83,7 +82,7 @@ const selection = ref("");
           @prev-step="toPrev"
         >
           <template #pagination>
-            Domanda {{ currentIndex }}/{{ questions.length }}
+            Domanda {{ currentIndex + 1 }}/{{ questions.length }}
           </template>
         </MoleculesQuestionStep>
       </template>
