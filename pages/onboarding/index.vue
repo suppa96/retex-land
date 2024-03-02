@@ -24,25 +24,14 @@ const updateInfo = () => {
   const data = ["Rompere le balle a Ska", "Snowboard", "Andare al mare"];
   updateUserInfo("passions", user.value?.email!, data);
 };
-
 const questions: QuestionStepProps[] = [
-  {
+{
     id: 1,
-    type: "single-choice",
-    question: "Com'è la tua giornata ideale?",
-    stepName: "passions",
-    options: [
-      "Relax, divano e Netflix",
-      "Sempre in movimento",
-      "Piena di sport",
-    ],
-  },
-  {
-    id: 2,
     type: "multi-select",
     question:
       "Quali sono i tre valori per te più importanti in ambito lavorativo?",
     stepName: "personal",
+    chip: { name: "personal", label: "Info personali", color: "bg-[#B6D6DA]" },
     options: [
       "Diversity & Inclusion",
       "Flessibilità",
@@ -51,9 +40,37 @@ const questions: QuestionStepProps[] = [
       "Collaborazione",
       "Ambizione",
     ],
+  },
+  {
+    id: 2,
+    type: "single-choice",
+    question: "Com'è la tua giornata ideale?",
+    stepName: "passions",
+    chip: { name: "passion", label: "Hobby e passioni", color: "bg-[#E6BEF8]" },
+    options: [
+      "Relax, divano e Netflix",
+      "Sempre in movimento",
+      "Piena di sport",
+    ],
+  },
+  {
+    id: 3,
+    type: "multi-select",
+    question: "Com'è la tua giornata ideale?",
+    stepName: "skills",
+    chip: { name: "skills", label: "Esperienze lavorative", color: "bg-[#BDDAB6]" },
+    options: [
+      "Marketing",
+      "Copywriting",
+      "Adv",
+      "Social",
+      "Creative strategy",
+      "Graphic Design",
+      "Branding"
+    ],
     optionalCta: {
       to: "/linkedin",
-      label: "Add LinkedIn",
+      label: "Aggiungi con LinkedIn",
       icon: "IconLinkedin",
     },
   },
@@ -102,11 +119,11 @@ watch(selection, (newVal) => {
 // });
 </script>
 <template>
-  <div class="welcome-page">
+  <div class="welcome-page mt-10">
     <h3 class="text-title-h3 text-white ml-4">Il tuo Retex Passport</h3>
     <!-- <pre>{{ selection }}</pre> -->
     <OrganismsScrollStepper
-      class="w-full"
+      class="w-full mt-10"
       v-bind="{ currentStep }"
       :steps="questions"
       @next-step="toNext"
