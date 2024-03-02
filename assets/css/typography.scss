@@ -1,4 +1,8 @@
 @layer base {
+  .text-small {
+    @apply text-xs;
+  }
+
   .text-paragraph-info {
     @apply font-light text-sm text-center;
   }

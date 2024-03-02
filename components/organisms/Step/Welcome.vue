@@ -18,13 +18,15 @@ const welcome = computed<string>(() => {
 </script>
 <template>
   <div class="grid-standard flex flex-col items-center pt-[80px]">
-    <div class="flex flex-col items-center mt-8 mb-14 text-white">
+    <div class="flex flex-col mx-[30px] items-center mt-8 mb-14 text-white">
       <IconsLogo class="w-full" />
       <div class="infos mt-20">
-        <h4 class="text-title-h4 text-center font-semibold">{{ `${welcome} ${user?.name} ` }}</h4>
+        <h4 class="text-title-h4 text-center font-semibold">
+          {{ `${welcome} ${user?.name} ` }}
+        </h4>
         <p class="text-paragraph-info text-center">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
-          ratione debitis quis est labore voluptatibus! Eaque cupiditate minima
+          Iniziamo insieme un viaggio avvincente oltre i confini del retail. Io
+          sarò la tua guida in questa terra da scoprire.
         </p>
       </div>
     </div>
@@ -32,10 +34,10 @@ const welcome = computed<string>(() => {
       :to="'/onboarding'"
       class="w-full px-4"
       @click="$emit('updateInfo')"
-      label="UPDATE GIORGIA"
+      label="CREA IL TUO PASSPORT"
       type="secondary"
     />
-    <AtomsLottie avatar="Fausto" />
+    <!-- <pre class="w-full px-4">{{ user }}</pre> -->
   </div>
 </template>
 
