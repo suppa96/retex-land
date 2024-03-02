@@ -9,7 +9,7 @@ const route = useRoute()
   <div class="relative overflow-hidden">
     <div v-if="route.name === 'strumenti'" class="overlay fixed top-0 w-full h-[250px] bg-gradient-to-b from-black duration-300 transition-all opacity-0" :class="[{ '!opacity-100': y > 50}]" />
     <AtomsBackgrounds bg-type="welcome" />
-    <div class="min-h-screen">
+    <div class="min-h-[calc(100dvh)]">
       <OrganismsHeader type="standard" />
       <slot />
     </div>

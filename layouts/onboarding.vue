@@ -1,7 +1,7 @@
 <template>
-  <div class="h-screen relative overflow-hidden">
+  <div class="h-[calc(100dvh)] relative overflow-hidden">
     <AtomsBackgrounds bg-type="onboarding" />
-    <div class="min-h-screen">
+    <div class="min-h-[calc(100dvh)]">
       <OrganismsHeader type="transparent" />
       <slot />
     </div>
