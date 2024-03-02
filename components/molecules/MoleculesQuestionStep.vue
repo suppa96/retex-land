@@ -4,6 +4,8 @@ import type { QuestionStepProps } from "./MoleculesQuestionStep.props";
 const props = defineProps<QuestionStepProps>();
 const emit = defineEmits<{
   (e: "select", payload: string): void;
+  (e: "next-step"): void;
+  (e: "prev-step"): void;
 }>();
 
 const selection = ref(props.selectedOption ?? "");
@@ -19,10 +21,12 @@ const handleSelect = (option: string) => {
 };
 </script>
 <template>
-  <div class="question-container mx-4 p-4 flex flex-col gap-8">
+  <div class="question-container mx-4 p-4 flex flex-col gap-8 bg-[#000000B2]">
     <div class="question-text flex flex-col gap-4 text-white">
       <div class="title flex justify-between items-center">
-        <slot name="pagination" class="text-title-h4"></slot>
+        <h4 class="text-title-h4">
+          <slot name="pagination"></slot>
+        </h4>
       </div>
       <p class="text-paragraph-info">{{ question }}</p>
       <div
@@ -37,9 +41,9 @@ const handleSelect = (option: string) => {
           :key="option"
           class="option bg-transparent text-white border border-white flex justify-center items-center transition-colors rounded-full"
           :class="{
-            'py-1': type === 'multi-select',
+            'py-1 px-4': type === 'multi-select',
             'py-3 w-full': type === 'single-choice',
-            'bg-white': selectedOption === option,
+            'bg-white text-black': selectedOption === option,
           }"
           @click="handleSelect(option)"
         >
@@ -51,8 +55,15 @@ const handleSelect = (option: string) => {
     <div
       class="question-button flex justify-between text-[rgba(124,_149,_215,_1)] text-paragraph-info font-bold"
     >
-      <button>Back</button>
-      <button>Skip</button>
+      <button
+        @click="$emit('prev-step')"
+        :class="
+          currentIndex !== 0 ? 'visible' : 'invisible pointer-events-none'
+        "
+      >
+        Back
+      </button>
+      <button @click="$emit('next-step')">Skip</button>
       <button class="invisible"></button>
     </div>
   </div>

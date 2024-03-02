@@ -10,32 +10,32 @@ const emit = defineEmits<{
 <template>
   <div class="scroll-container w-full">
     <div class="w-full navigation flex justify-between">
-      <button
+      <!-- <button
         class="bg-black prev-button text-white"
         @click="$emit('prev-step')"
         :class="
-          steps?.length && currentStep !== steps[0].name
+          steps?.length && currentStep !== steps[0].stepName
             ? 'visible'
             : 'invisible pointer-events-none'
         "
       >
         Prev
-      </button>
-      <button
+      </button> -->
+      <!-- <button
         class="bg-black next-button text-white"
         @click="$emit('next-step')"
         :class="
-          steps?.length && currentStep !== steps?.at(-1)?.name
+          steps?.length && currentStep !== steps?.at(-1)?.stepName
             ? 'visible'
             : 'invisible pointer-events-none'
         "
       >
         Next
-      </button>
+      </button> -->
     </div>
-    <div class="w-full relative" v-for="step in steps" :key="step.name">
+    <div class="w-full relative" v-for="step in steps" :key="step.id">
       <Transition>
-        <div class="absolute" v-if="step.name === currentStep">
+        <div class="absolute" v-if="step.stepName === currentStep">
           <slot name="step" v-bind="step"></slot>
         </div>
       </Transition>

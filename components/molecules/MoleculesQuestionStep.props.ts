@@ -1,5 +1,7 @@
 export type QuestionStepProps = {
+  id: number;
   type: string;
+  currentIndex?: number;
   question: string;
   stepName: string;
   options: string[];

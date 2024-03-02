@@ -29,10 +29,10 @@ const welcome = computed<string>(() => {
       :to="'/onboarding'"
       class="w-full px-4"
       @click="$emit('updateInfo')"
-      label="UPDATE GIORGIA"
+      label="CREA IL TUO PASSPORT"
       type="secondary"
     />
-    <pre class="w-full px-4">{{ user }}</pre>
+    <!-- <pre class="w-full px-4">{{ user }}</pre> -->
   </div>
 </template>
 

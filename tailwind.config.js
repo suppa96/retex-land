@@ -11,8 +11,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#0047FF'
-      }
+        primary: "#0047FF",
+        cardPrimary: "#000000B2",
+      },
     },
   },
   plugins: [],
