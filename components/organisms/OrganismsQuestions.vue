@@ -9,6 +9,11 @@ const historyQuestions = ref([])
         <AtomsQuestion label="Ciao sono user" type="user" />
         <AtomsQuestion label="Ciao sono chatbot" type="chatbot" />
         <AtomsQuestion label="Ciao sono user" type="user" />
+        <AtomsQuestion label="Ciao sono chatbot" type="chatbot" />
+        <AtomsQuestion label="Ciao sono chatbot" type="chatbot" />
+        <AtomsQuestion label="Ciao sono user" type="user" />
+        <AtomsQuestion label="Ciao sono chatbot" type="chatbot" />
+        <AtomsQuestion label="Ciao sono user" type="user" />
         <AtomsQuestion label="Ciao sono chatbot" type="chatbot" typing />
 </div>
 </template>

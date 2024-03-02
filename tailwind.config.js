@@ -17,6 +17,9 @@ export default {
       },
       borderRadius: {
         box: '8px'
+      },
+      fontSize: {
+        titleChat: "24px"
       }
     },
   },

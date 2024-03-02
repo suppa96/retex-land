@@ -14,7 +14,7 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.scss"],
   googleFonts: {
     families: {
-      Poppins: [300, 400, 500, 700],
+      Poppins: [300, 400, 500, 600, 700],
     },
     display: 'swap'
   },
