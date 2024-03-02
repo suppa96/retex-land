@@ -56,12 +56,12 @@ export const useConversation = () => {
         })
         await promiseTimeout(600)
         conversation.value.push({
-            label: "Sono Francesco Zanarotti, responsabile Digital Retex!",
+            label: "Sono Francesco",
             type: 'chatbot'
         })
         await promiseTimeout(600)
         conversation.value.push({
-            label: "Ti do il benvenuto nel mondo della burocrazia di Retex.",
+            label: "Hai presente quali sono gli strumenti principali ?",
             type: 'chatbot'
         })
         await promiseTimeout(600)
