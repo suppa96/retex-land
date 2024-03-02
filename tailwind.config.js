@@ -13,7 +13,8 @@ export default {
       colors: {
         primary: '#0047FF',
         lightBlue: '#BBF7FF',
-        lightGreen: '#83FFAD'
+        lightGreen: '#83FFAD',
+        lightYellow: '#E9F9CD'
       },
       borderRadius: {
         box: '8px'
