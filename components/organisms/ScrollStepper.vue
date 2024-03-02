@@ -35,7 +35,7 @@ const emit = defineEmits<{
     </div>
     <div class="w-full relative" v-for="step in steps" :key="step.id">
       <Transition>
-        <div class="absolute" v-if="step.stepName === currentStep">
+        <div class="absolute w-full" v-if="step.stepName === currentStep">
           <slot name="step" v-bind="step"></slot>
         </div>
       </Transition>

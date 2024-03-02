@@ -19,6 +19,17 @@ const handleSelect = (option: string) => {
     emit("select", selection.value);
   }
 };
+
+//TODO: make this shit work after integration
+const chipSelection = [
+  { name: "personal", label: "Info personali", color: "bg-[#B6D6DA]" },
+  { name: "passion", label: "Hobby e passioni", color: "bg-[#E6BEF8]" },
+  { name: "skills", label: "Esperienze lavorative", color: "bg-[#BDDAB6]" },
+];
+
+const activeChip = computed(
+  () => chipSelection.find((item) => item.name === props.stepName) ?? undefined
+);
 </script>
 <template>
   <div class="question-container mx-4 p-4 flex flex-col gap-8 bg-[#000000B2]">
@@ -27,6 +38,13 @@ const handleSelect = (option: string) => {
         <h4 class="text-title-h4">
           <slot name="pagination"></slot>
         </h4>
+        <div class="chip-stepname shrink-0" v-if="activeChip">
+          <div :class="activeChip.color" class="rounded-full px-[6px]">
+            <p class="text-small font-bold">
+              {{ activeChip.label }}
+            </p>
+          </div>
+        </div>
       </div>
       <p class="text-paragraph-info">{{ question }}</p>
       <div
@@ -39,7 +57,7 @@ const handleSelect = (option: string) => {
         <button
           v-for="option in options"
           :key="option"
-          class="option bg-transparent text-white border border-white flex justify-center items-center transition-colors rounded-full"
+          class="option bg-transparen border border-white flex justify-center items-center transition-colors rounded-full"
           :class="{
             'py-1 px-4': type === 'multi-select',
             'py-3 w-full': type === 'single-choice',

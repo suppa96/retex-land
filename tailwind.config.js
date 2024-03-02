@@ -12,7 +12,6 @@ export default {
     extend: {
       colors: {
         primary: "#0047FF",
-        cardPrimary: "#000000B2",
       },
     },
   },
