@@ -1,6 +1,6 @@
 [
     {
-        "question": "Hai compilato le ore ?",
+        "question": "Hai compilato il timesheet ?",
         "casesNegative": ["no", "oh", "cavolo", "hai", "ragione", "non", "ancora", "magari"],
         "file": {
             "id": "time-report",
@@ -8,19 +8,51 @@
         }
     },
     {
-        "question": "Sai come chiedere permesso ?",
+        "question": "Hai già richiesto la tua carta di credito aziendale ?",
         "casesNegative": ["no", "oh", "cavolo", "hai", "ragione", "non", "ancora", "magari"],
         "file": {
-            "id": "ferie-permessi",
-            "response": "Non ti preoccupare è semplice! Segui i prossimi step di questo documento"
+            "id": "carta-credito",
+            "response": "Peccato, è un'occasione pazzesca! Segui la procedura qui"
         }
     },
     {
-        "question": "La tua attrezzatura è tutto ok ?",
+        "question": "Hai mai usato la tua assicurazione sanitaria?",
+        "casesNegative": ["no", "oh", "cavolo", "hai", "ragione", "non", "ancora", "magari"],
+        "file": {
+            "id": "assicurazione-sanitaria",
+            "response": "La prevenzione è importante, approfondisci come poterne usufruire qui."
+        }
+    },
+    {
+        "question": "Sai leggere il tuo cedolino ?",
+        "casesNegative": ["no", "oh", "cavolo", "hai", "ragione", "non", "ancora", "magari"],
+        "file": {
+            "id": "cedolino",
+            "response": "Ti capiamo, ma è piú semplice di come puoi pensare! Qui trovi i passaggi"
+        }
+    },
+    {
+        "question": "Tutto apposto con il telefono e il pc aziendale ?",
         "casesNegative": ["no", "oh", "cavolo", "hai", "ragione", "non", "ancora", "magari"],
         "file": {
             "id": "supporto-it",
-            "response": "Per aprire un ticket al supporto IT basta seguerire i prossimi spassi spiegati nel file di seguito"
+            "response": "Apri subito un ticket su Jira, è velocissimo! Ecco come"
+        }
+    },
+    {
+        "question": "Sai che tipo di contratto hai ?",
+        "casesNegative": ["no", "oh", "cavolo", "hai", "ragione", "non", "ancora", "magari"],
+        "file": {
+            "id": "terziario-confcommercio",
+            "response": "È importante sapere che contratto hai, scopri qui i dettagli in pochi passi.."
+        }
+    },
+    {
+        "question": "Hai problemi con le note spese ?",
+        "casesNegative": ["no", "oh", "cavolo", "hai", "ragione", "non", "ancora", "magari"],
+        "file": {
+            "id": "note-spese",
+            "response": "Non ti preoccupare, qui puoi trovare la procedura!"
         }
     }
 ]

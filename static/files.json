@@ -4,7 +4,7 @@
         "keywords": ["metalmeccanica", "industria", "contratto", "ccnl", "terziari"],
         "file": {
             "name": "CCNL Metalmeccanica Industria.pdf",
-            "origin": "../assets/metalmeccanica.pdf"
+            "origin": "files/metalmeccanica.pdf"
         }
     },
     {
@@ -12,7 +12,7 @@
         "keywords": ["telefono", "cellulare", "aziendale", "telefoni", "cellulari"],
         "file": {
             "name": "Telecomunicazioni.pdf",
-            "origin": "../assets/telecomunicazioni.pdf"
+            "origin": "files/telecomunicazioni.pdf"
         }
     },
     {
@@ -20,7 +20,7 @@
         "keywords": ["assicurazione", "sanitaria", "fondo", "metasalute", "salute"],
         "file": {
             "name": "Telecomunicazioni.pdf",
-            "origin": "../assets/assicurazione-sanitaria.pptx"
+            "origin": "files/assicurazione-sanitaria.pptx"
         }
     },
     {
@@ -28,7 +28,7 @@
         "keywords": ["carta", "credito", "aziendale", "carte"],
         "file": {
             "name": "Carta di credito aziendale.pdf",
-            "origin": "../assets/carta-credito.pdf"
+            "origin": "files/carta-credito.pdf"
         }
     },
     {
@@ -36,15 +36,15 @@
         "keywords": ["busta", "paga", "buste", "cedolino", "certificazione", "unica", "irpef", "tfr", "ferie", "permessi", "permesso", "inail", "stipendio", "netto"],
         "file": {
             "name": "Cedolino.pdf",
-            "origin": "../assets/cedolino.pptx"
+            "origin": "files/cedolino.pptx"
         }
     },
     {
         "id": "congedo-matrimoniale",
-        "keywords": ["congedo", "matrimoniale", "matrimonio","matrimoni", ""],
+        "keywords": ["congedo", "matrimoniale", "matrimonio","matrimoni"],
         "file": {
             "name": "Congedo matrimoniale.pptx",
-            "origin": "../assets/congedo-matrimoniale.pptx"
+            "origin": "files/congedo-matrimoniale.pptx"
         }
     },
     {
@@ -52,7 +52,7 @@
         "keywords": ["ferie", "permessi", "rol"],
         "file": {
             "name": "Ferie e permessi.pptx",
-            "origin": "../assets/ferie-permessi.pptx"
+            "origin": "files/ferie-permessi.pptx"
         }
     },
     {
@@ -60,7 +60,7 @@
         "keywords": ["malattia", "infortunio", "assenza", "male", "febbre", "bene", "infortunio", "infortuni", "figlio", "figli", "certificato"],
         "file": {
             "name": "Malattia e infortunio.pptx",
-            "origin": "../assets/malattia-infortunio.pptx"
+            "origin": "files/malattia-infortunio.pptx"
         }
     },
     {
@@ -68,7 +68,7 @@
         "keywords": ["congedo", "maternità", "paternità", "matrimonio", "matrimoniale"],
         "file": {
             "name": "Maternità e paternità.pptx",
-            "origin": "../assets/maternita-paternita.pptx"
+            "origin": "files/maternita-paternita.pptx"
         }
     },
     {
@@ -76,7 +76,7 @@
         "keywords": ["nota", "note", "spese", "inaz", "rimborso", "rimborsi", "chilometrici", "viaggio", "trasferta", "cliente", "vitto", "pranzo", "cena", "pranzi"],
         "file": {
             "name": "Nota spese.pptx",
-            "origin": "../assets/nota-spese.pptx"
+            "origin": "files/nota-spese.pptx"
         }
     },
     {
@@ -84,7 +84,7 @@
         "keywords": ["rimborso", "spese", "rimborsi", "rimborsi", "chilometrici", "viaggio", "trasferta", "cliente", "vitto", "pranzo", "cena", "pranzi"],
         "file": {
             "name": "Rimborso spese.pptx",
-            "origin": "../assets/rimborso-speseo.pptx"
+            "origin": "files/rimborso-speseo.pptx"
         }
     },
     {
@@ -92,7 +92,7 @@
         "keywords": ["supporto", "it", "tech", "problema", "monitor", "computer", "tastiera", "mouse", "cellulare", "telefono", "mac", "pc"],
         "file": {
             "name": "Supporto it.pptx",
-            "origin": "../assets/supporto-it.pptx"
+            "origin": "files/supporto-it.pptx"
         }
     },
     {
@@ -100,7 +100,7 @@
         "keywords": ["contratto", "terziario", "confcommercio", "sindacato", "sindacali", "contratti", "terziari"],
         "file": {
             "name": "CCNL - Terziario Commercio.pdf",
-            "origin": "../assets/terziario-confcommercio.pdf"
+            "origin": "files/terziario-confcommercio.pdf"
         }
     },
     {
@@ -109,7 +109,7 @@
         "keywords": ["inserimento", "ore", "ora", "billable", "paprika", "progeta", "foglio", "inserire", "lavoro", "progetto", "progetti"],
         "file": {
             "name": "Paprika - Time report.pptx",
-            "origin": "../assets/time-report.pptx"
+            "origin": "files/time-report.pptx"
         }
     }
 ]

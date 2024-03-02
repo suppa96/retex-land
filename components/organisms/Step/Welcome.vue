@@ -17,13 +17,16 @@ const welcome = computed<string>(() => {
 });
 </script>
 <template>
-  <div class="w-full flex flex-col items-center">
-    <div class="flex flex-col mx-[30px] items-center mt-8 mb-6 text-white">
-      <h4 class="text-title-h4">{{ `${welcome} ${user?.name} ` }}</h4>
-      <p class="text-paragraph-info text-center">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
-        ratione debitis quis est labore voluptatibus! Eaque cupiditate minima
-      </p>
+  <div class="grid-standard flex flex-col items-center pt-[80px]">
+    <div class="flex flex-col items-center mt-8 mb-14 text-white">
+      <IconsLogo class="w-full" />
+      <div class="infos mt-20">
+        <h4 class="text-title-h4 text-center font-semibold">{{ `${welcome} ${user?.name} ` }}</h4>
+        <p class="text-paragraph-info text-center">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
+          ratione debitis quis est labore voluptatibus! Eaque cupiditate minima
+        </p>
+      </div>
     </div>
     <AtomsButton
       :to="'/onboarding'"
@@ -32,7 +35,7 @@ const welcome = computed<string>(() => {
       label="UPDATE GIORGIA"
       type="secondary"
     />
-    <pre class="w-full px-4">{{ user }}</pre>
+    <AtomsLottie avatar="Fausto" />
   </div>
 </template>
 

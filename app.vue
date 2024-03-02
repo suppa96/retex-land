@@ -1,9 +1,11 @@
 <script setup lang="ts">
-const { setQuestions } = await useQuestionsSetting()
+const { setQuestions } = await useQuestionsSettings()
+const { setFiles } = await useFiles()
 await setQuestions()
+await setFiles()
 </script>
 <template>
-  <main class="max-h-screen max-w-screen m-0 p-0 flex flex-col justify-between">
+  <main>
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>

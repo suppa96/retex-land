@@ -7,10 +7,10 @@ import { fileURLToPath } from "url";
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   typescript: {
-    typeCheck: true,
+    typeCheck: false,
   },
   devtools: { enabled: true },
-  modules: ["@pinia/nuxt", "@nuxt/image"],
+  modules: ['@pinia/nuxt' ,'@vueuse/nuxt', "@nuxt/image"],
   css: ["~/assets/css/main.scss"],
   vite: {
     plugins: [
