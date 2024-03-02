@@ -1,6 +1,7 @@
 export type User = {
   email: string;
   name: string;
+  gender: "m" | "f" | "nb";
   hash: string;
   surname: string;
   newProfile: boolean;
@@ -22,6 +23,7 @@ export const useUsersStore = defineStore("users", () => {
       hash: "1fb3b75e28dc98f0424e289fd16c0fde",
       name: "Giorgia",
       surname: "Carini",
+      gender: "f",
       newProfile: true,
     },
     {
@@ -29,6 +31,7 @@ export const useUsersStore = defineStore("users", () => {
       hash: "f2858703622f57ac4a81905d4afd72cf",
       name: "Ida",
       surname: "Mandolini",
+      gender: "m",
       newProfile: false,
       data: {
         personal: null,
@@ -80,5 +83,5 @@ export const useUsersStore = defineStore("users", () => {
 
 // @ts-ignore
 if (import.meta.hot)
-// @ts-ignore
-  import.meta.hot.accept(acceptHMRUpdate(useUsersStore, import.meta.hot))
+  // @ts-ignore
+  import.meta.hot.accept(acceptHMRUpdate(useUsersStore, import.meta.hot));
