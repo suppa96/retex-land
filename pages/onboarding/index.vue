@@ -104,7 +104,7 @@ watch(selection, (newVal) => {
 <template>
   <div class="welcome-page">
     <h3 class="text-title-h3 text-white ml-4">Il tuo Retex Passport</h3>
-    <pre>{{ selection }}</pre>
+    <!-- <pre>{{ selection }}</pre> -->
     <OrganismsScrollStepper
       class="w-full"
       v-bind="{ currentStep }"

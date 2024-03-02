@@ -25,6 +25,7 @@ const handleSelect = (option: string) => {
       value: selection.value,
       step: props.stepName,
     });
+    emit("next-step");
   }
 };
 
