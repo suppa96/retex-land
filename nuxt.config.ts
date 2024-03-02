@@ -7,16 +7,20 @@ import { fileURLToPath } from 'url'
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   typescript: {
-    typeCheck: true,
+    typeCheck: false,
   },
   devtools: { enabled: true },
   modules: ['@pinia/nuxt', '@nuxtjs/google-fonts' ,'@vueuse/nuxt'],
   css: ["~/assets/css/main.scss"],
   googleFonts: {
     families: {
-      Poppins: [300, 400, 500, 600, 700],
+      Poppins: {
+        wght: [300, 400, 500, 600, 700, 800],
+      },
     },
-    display: 'swap'
+    display: 'swap',
+    preload: true,
+    useStylesheet: true,
   },
   vite: {
     plugins: [

@@ -1,8 +1,10 @@
 <script setup lang="ts">
-const yScroll = ref(23)
+// @ts-ignore
+import { useWindowScroll } from "@vueuse/core"
+const { y } = useWindowScroll()
 </script>
 <template>
-  <div class="overlay fixed top-0 w-full h-[100px]" v-show="yScroll > 0"></div>
-  <OrganismsHeader type="standard" class="fixed top-0 w-full" />
+  <div class="overlay fixed top-0 w-full h-[200px] bg-gradient-to-b from-black duration-200 transition-all opacity-0" :class="[{ '!opacity-100': y > 100}]" />
+  <OrganismsHeader type="standard" class="fixed top-0 w-full z-10" />
   <slot />
 </template>

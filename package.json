@@ -3,11 +3,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "nuxt build",
+    "build": "NODE_OPTIONS='--max-old-space-size=8192' nuxt build",
+    "build:netlify": "NODE_OPTIONS='--max-old-space-size=8192' NITRO_PRESET=netlify nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "preview": "nuxt preview"
   },
   "dependencies": {
     "nuxt": "^3.10.3",
