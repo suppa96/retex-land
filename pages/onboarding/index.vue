@@ -25,7 +25,7 @@ const updateInfo = () => {
   updateUserInfo("passions", user.value?.email!, data);
 };
 const questions: QuestionStepProps[] = [
-{
+  {
     id: 1,
     type: "multi-select",
     question:
@@ -58,7 +58,11 @@ const questions: QuestionStepProps[] = [
     type: "multi-select",
     question: "In quali skill ti riconosci di più?",
     stepName: "skills",
-    chip: { name: "skills", label: "Esperienze lavorative", color: "bg-[#BDDAB6]" },
+    chip: {
+      name: "skills",
+      label: "Esperienze lavorative",
+      color: "bg-[#BDDAB6]",
+    },
     options: [
       "Marketing",
       "Copywriting",
@@ -66,7 +70,7 @@ const questions: QuestionStepProps[] = [
       "Social",
       "Creative strategy",
       "Graphic Design",
-      "Branding"
+      "Branding",
     ],
     optionalCta: {
       to: "/linkedin",
@@ -87,13 +91,16 @@ const currentStep = computed<string>(
 );
 const currentIndex = ref(0);
 
+const animationDirection = ref<"forward" | "backwards">("forward");
 const toNext = () => {
   if (currentIndex.value === questions.length - 1)
     navigateTo("/onboarding/complete");
   else currentIndex.value++;
+  animationDirection.value = "forward";
 };
 const toPrev = () => {
   currentIndex.value--;
+  animationDirection.value = "backwards";
 };
 
 const selection = ref<null | Answer>();
@@ -124,7 +131,7 @@ watch(selection, (newVal) => {
     <!-- <pre>{{ selection }}</pre> -->
     <OrganismsScrollStepper
       class="w-full mt-10"
-      v-bind="{ currentStep }"
+      v-bind="{ currentStep, animationDirection }"
       :steps="questions"
       @next-step="toNext"
       @prev-step="toPrev"

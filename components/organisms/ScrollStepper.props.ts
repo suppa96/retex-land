@@ -5,4 +5,5 @@ type Step = QuestionStepProps;
 export type ScrollStepperProps = {
   steps: Step[];
   currentStep: string;
+  animationDirection: "forward" | "backwards";
 };

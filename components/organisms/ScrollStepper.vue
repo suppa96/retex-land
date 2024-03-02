@@ -34,7 +34,7 @@ const emit = defineEmits<{
       </button> -->
     </div>
     <div class="w-full relative" v-for="step in steps" :key="step.id">
-      <Transition>
+      <Transition :name="animationDirection">
         <div class="absolute w-full" v-if="step.stepName === currentStep">
           <slot name="step" v-bind="step"></slot>
         </div>
@@ -43,18 +43,22 @@ const emit = defineEmits<{
   </div>
 </template>
 <style scoped>
-.v-enter-active {
+.forward-enter-active,
+.backwards-enter-active {
   transition: all 0.5s ease;
 }
-.v-leave-active {
+.forward-leave-active,
+.backwards-leave-active {
   transition: all 0.5s ease;
   opacity: 0;
 }
 
-.v-enter-from {
-  transform: translateX(-100%);
-}
-.v-leave-to {
+.backwards-leave-to,
+.forward-enter-from {
   transform: translateX(100%);
+}
+.backwards-enter-from,
+.forward-leave-to {
+  transform: translateX(-100%);
 }
 </style>
