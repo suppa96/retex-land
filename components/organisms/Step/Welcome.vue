@@ -37,7 +37,7 @@ const welcome = computed<string>(() => {
       label="CREA IL TUO PASSPORT"
       type="secondary"
     />
-    <!-- <pre class="w-full px-4">{{ user }}</pre> -->
+    <AtomsLottie avatar="Fausto" />
   </div>
 </template>
 
