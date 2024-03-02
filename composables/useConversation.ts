@@ -46,6 +46,16 @@ export const useConversation = () => {
         enableTexting.value = true
     }
 
+    const loadingChatbotResponse = async () => {
+        conversation.value.push({
+            label: '',
+            typing: true,
+            type: 'chatbot'
+        })
+        await promiseTimeout(500)
+        conversation.value.pop()
+    }
+
     const resetUserInput = () => {
         userInput.value = ''
         enableTexting.value = false
@@ -62,21 +72,16 @@ export const useConversation = () => {
         if(containsAnyWord(labelValue, randomQuestion.value.casesNegative)) {
             const labelResponse = randomQuestion.value.file.response
             const idFile = randomQuestion.value.file.id
-            const file = findFileById(idFile)
+            const file = await findFileById(idFile)
 
-            conversation.value.push({
-                label: '',
-                typing: true,
-                type: 'chatbot'
-            })
-            await promiseTimeout(500)
-            conversation.value.pop()
+            await loadingChatbotResponse()
+
             conversation.value.push({
                 label: labelResponse,
                 type: 'chatbot'
             })
+            console.log('file', file, randomQuestion.value.file.id)
             if(file) {
-                console.log('file', file)
                 conversation.value.push({
                     label: 'Allegato',
                     type: 'chatbot',
@@ -102,7 +107,34 @@ export const useConversation = () => {
     }
 
     const startConversation = (initToStart: boolean) => {
-        console.log('start', initToStart)
+        conversation.value.push({
+            label: initToStart ? 'Come posso esserti utile ?' : 'Posso fare altro per te ?',
+            type: 'chatbot',
+        })
+        enableTexting.value = true
+    }
+
+    const continueConversation = async () => {
+        conversation.value.push({
+            label: userInput.value,
+            type: 'user'
+        })
+        const labelValue = userInput.value ?? ''
+        resetUserInput()
+        if(!containsAnyWord(labelValue, randomQuestion.value.casesNegative)) {
+            await loadingChatbotResponse()
+            conversation.value.push({
+                label: 'risposta con file .....',
+                type: 'user',
+            })
+            startConversation(false)
+        }else {
+            await loadingChatbotResponse()
+            conversation.value.push({
+                label: 'Spero di esserti stat* utile! Buona giornata e buon lavoro!',
+                type: 'chatbot',
+            })
+        }
     }
 
     return {
@@ -110,6 +142,7 @@ export const useConversation = () => {
         userInput,
         initConversation,
         enableTexting,
-        addUserResponse
+        addUserResponse,
+        continueConversation
     }
 }

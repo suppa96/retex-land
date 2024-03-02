@@ -16,7 +16,7 @@
       }
     }
 
-    const findFileById = (id: string) => files.value ? files.value.find(file => file.id) : null
+    const findFileById = (id: string) => files.value ? files.value.find(file => file.id === id) : null
 
   return {
     // DATA 

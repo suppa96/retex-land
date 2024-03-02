@@ -1,8 +1,13 @@
 <script setup lang="ts">
-const { addUserResponse, enableTexting, userInput } = useConversation()
-
+const { addUserResponse, enableTexting, userInput, continueConversation } = useConversation()
+const isStartConversation = ref(true)
 const submit = () => {
-    addUserResponse()
+    if(isStartConversation.value){
+        addUserResponse()
+        isStartConversation.value = false
+    }else {
+        continueConversation()
+    }
 }
 </script>
 
