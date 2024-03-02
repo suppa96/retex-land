@@ -8,18 +8,18 @@ const emit = defineEmits<{
   (e: "prev-step"): void;
 }>();
 
-const selection = ref(props.selectedOption ?? "");
+const selection = ref(props.selectedOption.length > 0 ? [props.selectedOption] : []);
 
 const handleSelect = (option: string) => {
   if (props.type === "multi-select") {
-    selection.value += option;
+    selection.value.push(option);
     emit("select", {
       id: props.id,
       value: selection.value,
       step: props.stepName,
     });
   } else if (props.type === "single-choice") {
-    selection.value = option;
+    selection.value = [option];
     emit("select", {
       id: props.id,
       value: selection.value,
@@ -62,11 +62,7 @@ const handleSelect = (option: string) => {
           v-for="option in options"
           :key="option"
           class="option bg-transparent border font-light border-white flex justify-center items-center transition-colors rounded-full"
-          :class="{
-            'py-1 px-4': type === 'multi-select',
-            'py-3 w-full': type === 'single-choice',
-            'bg-primary text-white': selectedOption === option,
-          }"
+          :class="[{'py-1 px-4': type === 'multi-select'},{ 'py-3 w-full': type === 'single-choice'},{'!bg-primary text-white': selectedOption.includes(option),}]"
           @click="handleSelect(option)"
         >
           {{ option }}

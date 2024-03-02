@@ -6,7 +6,7 @@ export type QuestionStepProps = {
   stepName: string;
   options: string[];
   chip: any;
-  selectedOption?: string;
+  selectedOption?: string[];
   optionalCta?: {
     to: string;
     label: string;
