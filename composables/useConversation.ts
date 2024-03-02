@@ -4,7 +4,12 @@ export const useConversation = () => {
     const conversation = useState('conversation-texting', () => [])
     const enableTexting = useState('enable-setting', () => false)
 
+    const store = useQuestionsSettings()
+    const { randomQuestion } = storeToRefs(store)
+
     const initConversation = async () => {
+
+        console.log('randomQuestion', randomQuestion.value)
         conversation.value.push({
             label: "Ciao Mattia",
             type: 'chatbot'
@@ -33,6 +38,7 @@ export const useConversation = () => {
             label: label,
             type: 'user'
         })
+        enableTexting.value = false
     }
 
     return {

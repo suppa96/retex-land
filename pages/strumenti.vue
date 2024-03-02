@@ -14,7 +14,7 @@ const submit = () => {
         <OrganismsQuestions class="col-span-full"/>
 
         <div class="input-user mt-5 col-span-full flex justify-end">
-            <input v-model="inputUser" v-if="enableTexting" @key.press="submit" placeholder="Scrivi qui..." class="py-2 px-4 rounded-l-box w-full rounded-tr-box" />
+            <input v-model="inputUser" v-if="enableTexting" @keypress.enter="submit" placeholder="Scrivi qui..." class="py-2 px-4 rounded-l-box w-full rounded-tr-box" />
         </div>
     </div>
 </template>

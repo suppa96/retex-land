@@ -4,7 +4,7 @@ import { useWindowScroll } from "@vueuse/core"
 const { y } = useWindowScroll()
 </script>
 <template>
-  <div class="overlay fixed top-0 w-full h-[200px] bg-gradient-to-b from-black duration-200 transition-all opacity-0" :class="[{ '!opacity-100': y > 100}]" />
+  <div class="overlay fixed top-0 w-full h-[250px] bg-gradient-to-b from-black duration-300 transition-all opacity-0" :class="[{ '!opacity-100': y > 50}]" />
   <OrganismsHeader type="standard" class="fixed top-0 w-full z-10" />
   <slot />
 </template>
