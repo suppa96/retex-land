@@ -10,7 +10,7 @@ defineProps<OrganismsHeaderProps>();
     <IconsNotification v-if="type !== 'transparent'" />
     <IconsMenu v-if="type !== 'transparent'" />
     <div class="flex justify-end w-full" v-else>
-      <NuxtLink class="mx-[35px] mt-8 mb-6" to="/">
+      <NuxtLink to="/">
         <IconsClose />
       </NuxtLink>
     </div>

@@ -4,7 +4,7 @@ defineProps<{
 }>();
 </script>
 <template>
-  <div class="absolute -z-10">
+  <div class="absolute -z-10 w-full h-full">
     <div
       class="absolute"
       :class="{
@@ -34,8 +34,9 @@ defineProps<{
 }
 
 .onboarding-bg {
+  @apply w-full h-full;
   background-image: url("/backgrounds/bg-onboarding.png");
-  background-size: contain;
+  background-size: cover;
   background-position: 0 0;
   background-repeat: no-repeat;
 }
