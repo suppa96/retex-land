@@ -3,7 +3,7 @@ import type { QuestionStepProps } from "./MoleculesQuestionStep.props";
 
 const props = defineProps<QuestionStepProps>();
 const emit = defineEmits<{
-  (e: "select", payload: string): void;
+  (e: "select", payload: { id: number; value: string; step: string }): void;
   (e: "next-step"): void;
   (e: "prev-step"): void;
 }>();
@@ -13,10 +13,18 @@ const selection = ref(props.selectedOption ?? "");
 const handleSelect = (option: string) => {
   if (props.type === "multi-select") {
     selection.value += option;
-    emit("select", selection.value);
+    emit("select", {
+      id: props.id,
+      value: selection.value,
+      step: props.stepName,
+    });
   } else if (props.type === "single-choice") {
     selection.value = option;
-    emit("select", selection.value);
+    emit("select", {
+      id: props.id,
+      value: selection.value,
+      step: props.stepName,
+    });
   }
 };
 

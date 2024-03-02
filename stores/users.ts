@@ -6,14 +6,14 @@ export type User = {
   surname: string;
   newProfile: boolean;
   data?: {
-    personal?: Data | null;
-    passions?: Data | null;
-    skills?: Data | null;
+    personal?: Data[] | null;
+    passions?: Data[] | null;
+    skills?: Data[] | null;
   };
 };
 
 type Data = {
-  [x: string]: string;
+  [x: string]: string | string[];
 };
 
 export const useUsersStore = defineStore("users", () => {
@@ -57,6 +57,16 @@ export const useUsersStore = defineStore("users", () => {
     try {
       users.value = users.value.map((user) => {
         if (user.email === email) {
+          if (user.data && !!user.data[type]?.length) {
+            return {
+              ...user,
+              data: {
+                ...user.data,
+                [type]: data.push(data),
+              },
+            };
+          }
+
           return {
             ...user,
             data: {

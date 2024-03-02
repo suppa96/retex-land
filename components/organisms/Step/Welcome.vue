@@ -21,7 +21,7 @@ const welcome = computed<string>(() => {
     <div class="flex flex-col mx-[30px] items-center mt-8 mb-6 text-white">
       <h4 class="text-title-h4">{{ `${welcome} ${user?.name} ` }}</h4>
       <p class="text-paragraph-info text-center">
-        iniziamo insieme un viaggio avvincente oltre i confini del retail. Io
+        Iniziamo insieme un viaggio avvincente oltre i confini del retail. Io
         sarò la tua guida in questa terra da scoprire.
       </p>
     </div>
