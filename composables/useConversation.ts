@@ -55,7 +55,7 @@ export const useConversation = () => {
         })
         await promiseTimeout(600)
         conversation.value.push({
-            label: "Sono Marialuisa Pes, responsabile HR!",
+            label: "Sono Francesco Zanarotti, responsabile Digital Retex!",
             type: 'chatbot'
         })
         await promiseTimeout(600)

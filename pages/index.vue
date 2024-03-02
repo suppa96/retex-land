@@ -19,5 +19,5 @@ const updateInfo = () => {
 };
 </script>
 <template>
-  <OrganismsStepWelcome v-if="user" v-bind="{ user }"></OrganismsStepWelcome>
+  <OrganismsStepWelcome v-if="user" v-bind="{ user }" />
 </template>
