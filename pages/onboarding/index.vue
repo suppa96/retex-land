@@ -56,7 +56,7 @@ const questions: QuestionStepProps[] = [
   {
     id: 3,
     type: "multi-select",
-    question: "Com'è la tua giornata ideale?",
+    question: "In quali skill ti riconosci di più?",
     stepName: "skills",
     chip: { name: "skills", label: "Esperienze lavorative", color: "bg-[#BDDAB6]" },
     options: [
@@ -120,7 +120,7 @@ watch(selection, (newVal) => {
 </script>
 <template>
   <div class="welcome-page mt-10">
-    <h3 class="text-title-h3 text-white ml-4">Il tuo Retex Passport</h3>
+    <h3 class="text-title-h3 text-white ml-4 font-semibold">Il tuo Retex Passport</h3>
     <!-- <pre>{{ selection }}</pre> -->
     <OrganismsScrollStepper
       class="w-full mt-10"

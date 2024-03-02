@@ -11,6 +11,7 @@ declare module 'vue' {
     IconsComputer: typeof import('~icons/icons/computer')['default']
     IconsDownload: typeof import('~icons/icons/download')['default']
     IconsJournal: typeof import('~icons/icons/journal')['default']
+    IconsLinkedIn: typeof import('~icons/icons/linked-in')['default']
     IconsLogo: typeof import('~icons/icons/logo')['default']
     IconsMenu: typeof import('~icons/icons/menu')['default']
     IconsMic: typeof import('~icons/icons/mic')['default']

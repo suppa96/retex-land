@@ -178,7 +178,7 @@ export const useConversation = () => {
         }else {
             await loadingChatbotResponse()
             conversation.value.push({
-                label: 'Spero di esserti stat* utile! Buona giornata e buon lavoro!',
+                label: 'Spero di esserti stato utile! Buona giornata e buon lavoro!',
                 type: 'chatbot',
             })
         }
