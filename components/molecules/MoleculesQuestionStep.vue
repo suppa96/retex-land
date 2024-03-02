@@ -25,7 +25,9 @@ const handleSelect = (option: string) => {
       value: selection.value,
       step: props.stepName,
     });
-    emit("next-step");
+    setTimeout(() => {
+      emit("next-step");
+    }, 300);
   }
 };
 </script>
