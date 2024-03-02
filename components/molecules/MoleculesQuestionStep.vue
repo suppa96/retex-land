@@ -48,7 +48,7 @@ const handleSelect = (option: string) => {
       </div>
       <p class="text-paragraph-info text-start">{{ question }}</p>
       <div class="my-2 flex items-center justify-center" v-if="optionalCta">
-        <IconsLinkedIn class="w-5 h-5 inline mr-2" />
+        <IconsLinkedin class="w-5 h-5 inline mr-2" />
         <p class="text-paragraph-info inline">{{ optionalCta.label }}</p>
       </div>
       <div
