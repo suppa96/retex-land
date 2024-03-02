@@ -22,6 +22,32 @@ export const useConversation = () => {
         return false
     }
 
+    const findBestMatch = (prompt: string) => {
+        let bestMatch = null;
+        let maxScore = 0;
+        
+        files.value.forEach(item => {
+            const keywords = item.keywords || [];
+            const fileName = item.file.name;
+            
+            // Combine keywords and file name into a single string for matching
+            const combinedKeywords = keywords.join(' ') + ' ' + fileName;
+            
+            // Calculate match score based on the number of matching keywords
+            const matchScore = keywords.reduce((score, keyword) => {
+                const regex = new RegExp(`\\b${keyword}\\b`, 'gi');
+                return score + (prompt.match(regex) || []).length;
+            }, 0);
+            
+            if (matchScore > maxScore) {
+                maxScore = matchScore;
+                bestMatch = item;
+            }
+        });
+        
+        return bestMatch;
+    }
+
     const initConversation = async () => {
         conversation.value.push({
             label: "Ciao Giorgia",
@@ -80,7 +106,6 @@ export const useConversation = () => {
                 label: labelResponse,
                 type: 'chatbot'
             })
-            console.log('file', file, randomQuestion.value.file.id)
             if(file) {
                 conversation.value.push({
                     label: 'Allegato',
@@ -122,12 +147,34 @@ export const useConversation = () => {
         const labelValue = userInput.value ?? ''
         resetUserInput()
         if(!containsAnyWord(labelValue, randomQuestion.value.casesNegative)) {
-            await loadingChatbotResponse()
-            conversation.value.push({
-                label: 'risposta con file .....',
-                type: 'user',
-            })
-            startConversation(false)
+            const findFile = await findBestMatch(labelValue)
+            console.log('findFile',findFile)
+            if(findFile){
+                await loadingChatbotResponse()
+                conversation.value.push({
+                    label: 'Certo, ti allego il documento a cui puoi fare riferimento',
+                    type: 'chatbot',
+                })
+                conversation.value.push({
+                    label: 'Allegato',
+                    type: 'chatbot',
+                    file: {
+                        label: findFile.file.name,
+                        path: findFile.file.origin
+                    }
+                })
+                startConversation(false)
+                return
+            }else {
+                await loadingChatbotResponse()
+                conversation.value.push({
+                    label: 'Oh no! Non ho trovato le informazioni che stavi cercando...',
+                    type: 'chatbot',
+                })
+                startConversation(false)
+                return;
+                return
+            }
         }else {
             await loadingChatbotResponse()
             conversation.value.push({
