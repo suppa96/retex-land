@@ -2,9 +2,24 @@
 // @ts-ignore
 import { useWindowScroll } from "@vueuse/core"
 const { y } = useWindowScroll()
+
 </script>
+
 <template>
-  <div class="overlay fixed top-0 w-full h-[250px] bg-gradient-to-b from-black duration-300 transition-all opacity-0" :class="[{ '!opacity-100': y > 50}]" />
-  <OrganismsHeader type="standard" class="fixed top-0 w-full z-10" />
-  <slot />
+  <div class="h-screen relative overflow-hidden">
+    <div class="overlay fixed top-0 w-full h-[250px] bg-gradient-to-b from-black duration-300 transition-all opacity-0" :class="[{ '!opacity-100': y > 50}]" />
+    <AtomsBackgrounds bg-type="welcome" />
+    <div class="min-h-screen">
+      <OrganismsHeader type="standard" />
+      <slot />
+    </div>
+  </div>
 </template>
+<style scoped lang="scss">
+.welcome-bg {
+  background-image: url("/backgrounds/bg-welcome.png");
+  background-size: cover;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+</style>
