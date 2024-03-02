@@ -8,10 +8,15 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     IconsClose: typeof import('~icons/icons/close')['default']
+    IconsComputer: typeof import('~icons/icons/computer')['default']
     IconsDownload: typeof import('~icons/icons/download')['default']
+    IconsJournal: typeof import('~icons/icons/journal')['default']
     IconsLogo: typeof import('~icons/icons/logo')['default']
     IconsMenu: typeof import('~icons/icons/menu')['default']
+    IconsMic: typeof import('~icons/icons/mic')['default']
     IconsNotification: typeof import('~icons/icons/notification')['default']
+    IconsPeople: typeof import('~icons/icons/people')['default']
+    IconsSocial: typeof import('~icons/icons/social')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
